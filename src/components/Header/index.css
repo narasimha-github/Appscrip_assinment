@@ -1,0 +1,132 @@
+.headerMainContainer{
+    height: 15vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    border-bottom-style: solid;
+    border-color: black;
+    border-width: 1px;
+    z-index: 100;
+}
+
+.headerSubContainer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.websiteLogo{
+    height: 60px;
+}
+
+.websiteFavoriteIcons{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serchIcon{
+    height: 25px;
+    padding-right: 20px;
+}
+
+.heartIcon{
+    height: 25px;
+    padding-right: 20px;
+}
+
+.bagIcon{
+    height: 25px;
+    padding-right: 20px;
+}
+
+
+
+.headerSubContainer2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.logoName{
+    padding-left: 200px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+.userIcon{
+    height: 25px;
+    padding-right: 20px;
+}
+
+.select{
+   background-color: transparent;
+   border: none;
+}
+.websiteLogo1{
+    height: 60px;
+    display: none;
+    padding-left: 10px;
+}
+.optionContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 575px) {
+    .userIcon{
+        display: none;
+    }
+    .select{
+        display: none;
+    }
+    .websiteLogo1{
+        display: block;
+        padding-right: 20px;
+        height: 40px;
+    }
+    .websiteLogo{
+        height: 40px;
+    }
+    .headerSubContainer2{
+        display: none;
+    }
+    .logoName{
+        padding-left: 0px;
+    }
+    .headerSubContainer1{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .headerMainContainer{
+        height: 10vh;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1000px) {
+    .logoName{
+        padding-left: 0px;
+    }
+    .headerSubContainer1{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .headerSubContainer2{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+  

@@ -1,0 +1,87 @@
+.productContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.eachProductContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    overflow-x: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.productImage{
+    height: 100px;
+    width: 100px;
+}
+
+.eachProductTitle{
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: italic;
+}
+
+.eachProductCategory{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: oblique;
+}
+
+.eachProductDescription{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: oblique;
+}
+
+.eachProductCost{
+    color: crimson;
+}
+
+.eachProductRating{
+    background-color: rgb(8, 249, 68);
+    width: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0px;
+    transition: 0.3s ease;
+}
+
+.eachProductRating:hover{
+    height: 35px;
+    width: 70px;
+}
+
+.ratingAndStockContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.eachProductStock{
+    padding-top: 5px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: oblique;
+    padding-left: 40px;
+}

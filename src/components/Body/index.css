@@ -1,0 +1,171 @@
+.decContainer{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.bodyMainContainer{
+    padding-top: 15vh;
+}
+
+.allProducts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    z-index: 10;
+}
+
+.decBorder{
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #000;
+}
+
+.bodyFilterContainer{
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+    border-top-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.filterName{
+    display: none;
+}
+
+.ItemsCountContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.totalItems{
+    padding-right: 15px;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 200px;
+    z-index: 1;
+  }
+  
+  .custom-select {
+    width: 100%;
+    padding: 10px;
+    appearance: none;
+    background: transparent;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .custom-select option {
+    color: #555;
+    background-color: #f1f1f1;
+  }
+  
+  .custom-select option:checked {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #000;
+  }
+  
+  .custom-select option:checked::after {
+    content: " ✔";
+    float: right;
+  }
+  
+  .custom-select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333;
+  }
+  
+  .custom-select:hover {
+    border-color: #888;
+  }
+  
+  .custom-select:focus {
+    outline: none;
+    border-color: #666;
+  }
+
+  .filterBut{
+    color: #555;
+  }
+  
+@media screen and (max-width: 575px){
+    .ItemsCountContainer{
+        display: none;
+    }
+    .decHeading{
+        height: 30px;
+        font-size: large;
+    }
+    .decContainer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .decPara{
+        font-size: small;
+    }
+    .bodyFilterContainer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .filterName{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .decHeading{
+        height: 30px;
+        font-size: large;
+    }
+    .decContainer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .decPara{
+        font-size: small;
+    }
+    .bodyFilterContainer{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}
+
+@media screen and (min-width: 649px) and (max-width: 900px){
+    .decPara{
+        font-size: small;
+    }
+    .decHeading{
+        font-size: x-large;
+    }
+    .bodyFilterContainer{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
