@@ -4,7 +4,7 @@ import './index.css'
 
 const Products = props => {
     const {eachItem} = props
-    const {category, description, image, price, rating, title} = eachItem
+    const {category, image, price, rating, title} = eachItem
     const {rate, count} = rating
 
     return(
@@ -12,7 +12,6 @@ const Products = props => {
                <img src={image} alt='Each Item' className='productImage' />
                <h3 className='eachProductTitle'>{title}</h3>
                <h3 className='eachProductCategory'>{category}</h3>
-               <p className='eachProductDescription'>{description}</p>
                <h2 className='eachProductCost'>{`RS :${price}/-`}</h2>
                <div className='ratingAndStockContainer'>
                  <p className='eachProductRating'><FontAwesomeIcon icon={faStar} /> {rate}</p>
