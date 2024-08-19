@@ -17,6 +17,7 @@
 .allProducts{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     padding-left: 5px;
     z-index: 10;
