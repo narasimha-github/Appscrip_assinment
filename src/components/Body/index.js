@@ -6,6 +6,9 @@ import './index.css'
 const Body = () => {
     const [products, setProducts] = useState([])
     const [showFilter, setShowFilter] = useState(false)
+    const [sortOption, setSortOption] = useState('RECOMENDED');
+    const [sortedProducts, setSortedProducts] = useState([]);
+
 
     const filterView = () => {
         setShowFilter(!showFilter)
@@ -14,6 +17,10 @@ const Body = () => {
     const sideBarController = controller => {
         setShowFilter(controller)
     }
+
+    const handleSortChange = (event) => {
+      setSortOption(event.target.value);
+    };
 
     const getDataFromApi = async () => {
         const url = 'https://fakestoreapi.com/products';
@@ -32,6 +39,28 @@ const Body = () => {
             console.error('Error fetching data:', error);
         }
     }
+
+    useEffect(() => {
+      let sorted = [...products];
+  
+      switch (sortOption) {
+        case 'NEWEST FIRST':
+          sorted = sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
+          break;
+        case 'PRICE :HIGH-LOW':
+          sorted = sorted.sort((a, b) => b.price - a.price);
+          break;
+        case 'PRICE :LOW-HIGH':
+          sorted = sorted.sort((a, b) => a.price - b.price);
+          break;
+        default:
+          sorted = products;
+          break;
+      }
+  
+      setSortedProducts(sorted);
+    }, [sortOption, products]);
+  
 
     useEffect(() => {
        getDataFromApi()
@@ -57,20 +86,20 @@ const Body = () => {
                 <button onClick={filterView} type='button'>FILTER</button>
             </div>
             <div className='custom-select-wrapper'>
-              <select id="custom-select" className="custom-select">
-                 <option>RECOMENDED</option>
-                 <option>NEWEST FIRST</option>
-                 <option>RECOMENDED</option>
-                 <option>PRICE :HIGH-LOW</option>
-                 <option>PRICE :LOW-HIGH</option>
-              </select>
+            <select id="custom-select" className="custom-select" onChange={handleSortChange}>
+        <option value="RECOMENDED">RECOMENDED</option>
+        <option value="NEWEST FIRST">NEWEST FIRST</option>
+        <option value="PRICE :HIGH-LOW">PRICE :HIGH-LOW</option>
+        <option value="PRICE :LOW-HIGH">PRICE :LOW-HIGH</option>
+      </select>
+
             </div>
           </div>
           </div>
           <div>
             <Sidebar showFilter1={showFilter} sideBarController={sideBarController}/>
             <ul className='allProducts'>
-              {products.map(each => (
+              {sortedProducts.map(each => (
                 <Products eachItem={each} key={each.id} />
               ))}
           </ul>
